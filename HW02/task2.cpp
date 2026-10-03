@@ -27,12 +27,13 @@ int main(int argc, char* argv[]) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_real_distribution<float> dis(-10.0f, 10.0f);
+    std::uniform_real_distribution<float> dis2(-1.0f, 1.0f);
 
     for (int i = 0; i < n*n; i++) {
         image[i] = dis(gen);
     }
     for (int j=0; j < m*m; j++) {
-        mask[j] = dis(gen);
+        mask[j] = dis2(gen);
     }
 
     start = high_resolution_clock::now();
