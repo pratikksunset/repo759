@@ -31,11 +31,6 @@ int main(int argc, char* argv[]) {
         arr[i] = dis(gen);
     }
 
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << "\n";
-
     omp_set_num_threads(t);
 
     start = high_resolution_clock::now();
